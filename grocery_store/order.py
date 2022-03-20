@@ -1,6 +1,3 @@
-
-
-
 def create_order(products, customer_name):
     return {
         "customer_name": customer_name,
@@ -12,7 +9,8 @@ def add_product(order, product):
 
 def calculate_total(order):
     total = 0
-    for i in range(1, len(order["products"])):
+    for i in range(len(order["products"])):
+        print(order["products"])
         total += order["products"][i]["price"]
 
     return total
